@@ -1,5 +1,5 @@
 # Statemachine
-A very simple state machine I use for my [MBED](http://mbed.org) projects.
+A very simple state machine I often use for my [MBED](http://mbed.org) projects.
 
 ## Sample use
 
@@ -48,6 +48,9 @@ STATE One[] =
     { 0, NULL, NULL, NULL },
 };
 ```
+
+Of course you can have multiple co-existing state machines. I often use one for the main app that handles main devices: keyboard, display, etc.). The I use another machine for serial communications protocols.
+
 
 
 

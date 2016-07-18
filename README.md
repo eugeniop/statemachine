@@ -27,6 +27,13 @@ public:
   void Init(){
     appStateMachine.Init(this, Main);
   };
+  
+  void Start(){
+    while(1){
+      char event = getchar();
+      this->HandleEvent(event);
+    }
+  }
 };
 ```
 
@@ -51,6 +58,15 @@ STATE One[] =
 
 Of course you can have multiple co-existing state machines. I often use one for the main app that handles main devices: keyboard, display, etc.). The I use another machine for serial communications protocols.
 
+The man `main` typcially looks like this:
 
-
-
+```cpp
+int main(void)
+{
+    App app();
+    
+    app.Init();
+    
+    app.Start();
+}
+```

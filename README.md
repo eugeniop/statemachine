@@ -54,6 +54,12 @@ STATE One[] =
     { 'B',      Main,     NULL,      NULL },
     { 0, NULL, NULL, NULL },
 };
+
+STATE Two[] = 
+{
+    { 'B',      Main,     NULL,      NULL },
+    { 0, NULL, NULL, NULL },
+};
 ```
 
 Of course you can have multiple co-existing state machines. I often use one for the main app that handles main devices: keyboard, display, etc.). The I use another machine for serial communications protocols.
